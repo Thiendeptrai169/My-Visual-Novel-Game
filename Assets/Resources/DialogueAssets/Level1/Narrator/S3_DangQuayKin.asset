@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S3_DangQuayKin
+  m_EditorClassIdentifier: 
+  nodeId: S3
+  npcText: "\u0110i\u1EC7n tho\u1EA1i \u0111ang quay, b\u1EA1n c\xF3 th\u1EC3 v\u1EEBa
+    ghi h\xECnh v\u1EEBa quy\u1EBFt \u0111\u1ECBnh l\xE0m g\xEC ti\u1EBFp."
+  choices:
+  - choiceText: "Ti\u1EBFp t\u1EE5c ch\u1EC9 quay, ch\u01B0a xen v\xE0o"
+    tensionImpact: 5
+    stateEffects:
+    - effectType: 2
+      variableName: rumorLevel
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.1
+    nextNode: {fileID: 11400000, guid: ae70edc035f13ea4892ac68e923600a5, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "G\u1EEDi nhanh video cho Linh v\u1EDBi caption \"Ra \u0111\xE2y
+      gi\xFAp\""
+    tensionImpact: 0
+    stateEffects:
+    - effectType: 1
+      variableName: bystanderSupport
+      boolValue: 0
+      intValue: 1
+      floatValue: 0
+    nextNode: {fileID: 11400000, guid: 5995759d03865044db91bf11a03b185b, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "B\u1ECF \u0111i\u1EC7n tho\u1EA1i v\xE0o t\xFAi, b\u01B0\u1EDBc
+      l\u1EA1i g\u1EA7n can thi\u1EC7p"
+    tensionImpact: -5
+    stateEffects:
+    - effectType: 2
+      variableName: victimTrust
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.1
+    nextNode: {fileID: 11400000, guid: 6babf4488675a5a41ab023d04d7f1900, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 0}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

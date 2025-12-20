@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S8_ChiDungQuay
+  m_EditorClassIdentifier: 
+  nodeId: S8
+  npcText: "B\u1EA1n ti\u1EBFp t\u1EE5c quay. H\xECnh \u1EA3nh trong khung h\xECnh
+    c\xE0ng l\xFAc c\xE0ng c\u0103ng."
+  choices:
+  - choiceText: "Ch\u1EC9 quay, sau \u0111\xF3 \u0111\u1ECBnh g\u1EEDi cho Nam sau
+      n\xE0y"
+    tensionImpact: 0
+    stateEffects: []
+    nextNode: {fileID: 11400000, guid: a0f7c5628766a294c82949cf88ccf2f0, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "D\u1EEBng quay, g\u1ECDi \u0111i\u1EC7n tr\u1EF1c ti\u1EBFp cho
+      c\xF4 ch\u1EE7 nhi\u1EC7m"
+    tensionImpact: 0
+    stateEffects:
+    - effectType: 0
+      variableName: calledHelp
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    - effectType: 0
+      variableName: teacherOnTheWay
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    nextNode: {fileID: 11400000, guid: 117f62c540646db4eaf335f3cac8e1a6, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "V\u1EEBa quay v\u1EEBa h\xE9t: \"N\xE0y \u0111\u1EE7 r\u1ED3i \u0111\xF3
+      H\xF9ng!\""
+    tensionImpact: 10
+    stateEffects:
+    - effectType: 0
+      variableName: recordingDiscovered
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    - effectType: 0
+      variableName: aggressorFocusOnPlayer
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    nextNode: {fileID: 11400000, guid: b16d056c41e1e6344a5e703ce168b857, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 11400000, guid: 85b3cc1895312914fb8d177864b2eacf, type: 2}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

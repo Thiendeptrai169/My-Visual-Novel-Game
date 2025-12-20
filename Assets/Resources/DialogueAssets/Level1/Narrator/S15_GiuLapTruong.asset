@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S15_GiuLapTruong
+  m_EditorClassIdentifier: 
+  nodeId: S15
+  npcText: "B\u1EA1n c\u1ED1 gi\u1EEF v\u1EEFng quan \u0111i\u1EC3m \"d\u1EEBng l\u1EA1i\"
+    nh\u01B0ng tr\xE1nh ch\u1ECDc v\xE0o t\u1EF1 \xE1i c\u1EE7a H\xF9ng."
+  choices:
+  - choiceText: "\u0110\u1EC1 ngh\u1ECB c\u1EA3 ba ra kh\u1ECFi h\xE0nh lang, t\xECm
+      ch\u1ED7 \xEDt ng\u01B0\u1EDDi n\xF3i chuy\u1EC7n"
+    tensionImpact: -10
+    stateEffects:
+    - effectType: 0
+      variableName: victimSafe
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    nextNode: {fileID: 11400000, guid: 855f37a6031cc2342a974f41742d1808, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "N\xF3i: \"N\u1EBFu m\xE0y v\u1EABn mu\u1ED1n n\xF3i ti\u1EBFp, c\u1EE9
+      n\xF3i, nh\u01B0ng tay m\xE0y b\u1ECF kh\u1ECFi c\u1ED5 \xE1o b\u1EA1n tao
+      tr\u01B0\u1EDBc \u0111\xE3\""
+    tensionImpact: -5
+    stateEffects:
+    - effectType: 0
+      variableName: aggressorFocusOnPlayer
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    nextNode: {fileID: 11400000, guid: ce77a7af384b29941a709baedbac67cf, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 0}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

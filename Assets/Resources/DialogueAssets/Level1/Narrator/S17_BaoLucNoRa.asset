@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S17_BaoLucNoRa
+  m_EditorClassIdentifier: 
+  nodeId: S17
+  npcText: "Kh\xF4ng kh\xED v\u1EE1 v\u1EE5n. C\xF3 x\xF4 \u0111\u1EA9y, c\xF3 ng\u01B0\u1EDDi
+    ng\xE3...\n\n\u26A0\uFE0F M\u1EE9c c\u0103ng th\u1EB3ng \u0111\xE3 v\u01B0\u1EE3t
+    ng\u01B0\u1EE1ng nguy hi\u1EC3m!"
+  choices: []
+  characterDialogue: {fileID: 11400000, guid: 06b8ad30a36dd344d90c155d07897dba, type: 2}
+  isEndingNode: 1
+  endingTitle: "B\u1EA1o l\u1EF1c n\u1ED5 ra"
+  isGoodEnding: 0

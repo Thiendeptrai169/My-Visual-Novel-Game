@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: E7_HoaGiaiDanHuong
+  m_EditorClassIdentifier: 
+  nodeId: E7
+  npcText: "B\u1EA1n k\xE9o c\xE2u chuy\u1EC7n v\u1EC1 h\u01B0\u1EDBng 'h\u1EB9n
+    g\u1EB7p gi\xE1o vi\xEAn c\u1ED1 v\u1EA5n'.\nH\xF9ng b\u1EDBt n\xF3ng v\xE0 ch\u1ECBu
+    th\u1EED n\xF3i chuy\u1EC7n \u0111\xE0ng ho\xE0ng."
+  choices: []
+  characterDialogue: {fileID: 11400000, guid: 5bca477fdac6644408bca448bfc891c3, type: 2}
+  isEndingNode: 1
+  endingTitle: "H\xF2a gi\u1EA3i d\u1EABn h\u01B0\u1EDBng"
+  isGoodEnding: 1

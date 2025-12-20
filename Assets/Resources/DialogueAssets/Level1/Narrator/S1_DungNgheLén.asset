@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: "S1_DungNgheL\xE9n"
+  m_EditorClassIdentifier: 
+  nodeId: S1
+  npcText: "B\u1EA1n \u0111\u1EE9ng khu\u1EA5t sau c\u1ED9t, nghe H\xF9ng v\u1EEBa
+    ch\u1EEDi v\u1EEBa \u0111\u1EADp tay v\xE0o t\u01B0\u1EDDng c\u1EA1nh \u0111\u1EA7u
+    Nam."
+  choices:
+  - choiceText: "\u0110\u1EE3i th\xEAm xem m\u1EE9c \u0111\u1ED9 c\u0103ng th\u1EB3ng
+      t\u1EDBi \u0111\xE2u"
+    tensionImpact: 5
+    stateEffects:
+    - effectType: 2
+      variableName: rumorLevel
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.1
+    nextNode: {fileID: 11400000, guid: f94621db3e2a44e4eb04278c9ae37782, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "Nh\u1EAFn tin nhanh cho Linh: \"H\xE0nh lang A, ra \u0111\xE2y g\u1EA5p\""
+    tensionImpact: 0
+    stateEffects:
+    - effectType: 1
+      variableName: bystanderSupport
+      boolValue: 0
+      intValue: 1
+      floatValue: 0
+    nextNode: {fileID: 11400000, guid: 5995759d03865044db91bf11a03b185b, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "Th\u1EDF d\xE0i, ngh\u0129 \"kh\xF4ng n\xEAn xen v\xE0o chuy\u1EC7n
+      ng\u01B0\u1EDDi kh\xE1c\" r\u1ED3i b\u1ECF \u0111i"
+    tensionImpact: -5
+    stateEffects:
+    - effectType: 0
+      variableName: playerWalkedAway
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    - effectType: 2
+      variableName: playerReputation
+      boolValue: 0
+      intValue: 0
+      floatValue: -0.2
+    - effectType: 2
+      variableName: victimTrust
+      boolValue: 0
+      intValue: 0
+      floatValue: -0.4
+    nextNode: {fileID: 11400000, guid: 0b3dfe4f0be787349a94470033d29f65, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 0}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: E3_RutLuiCungNanNhan
+  m_EditorClassIdentifier: 
+  nodeId: E3
+  npcText: "B\u1EA1n \u0111\u01B0a Nam ra kh\u1ECFi ch\u1ED7 nguy hi\u1EC3m.\nC\xE2u
+    chuy\u1EC7n v\u1EDBi H\xF9ng ch\u01B0a \u0111\u01B0\u1EE3c gi\u1EA3i quy\u1EBFt,
+    c\xF3 nguy c\u01A1 b\xF9ng l\u1EA1i sau."
+  choices: []
+  characterDialogue: {fileID: 11400000, guid: a61b23bfabff4fc43b443c9890347433, type: 2}
+  isEndingNode: 1
+  endingTitle: "R\xFAt lui c\xF9ng n\u1EA1n nh\xE2n"
+  isGoodEnding: 1

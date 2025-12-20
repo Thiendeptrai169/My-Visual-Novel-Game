@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S16_KeoDuocNamRa
+  m_EditorClassIdentifier: 
+  nodeId: S16
+  npcText: "Nh\u1EDD \u0111\xE1nh l\u1EA1c h\u01B0\u1EDBng, Nam b\u01B0\u1EDBc l\xF9i
+    v\u1EC1 ph\xEDa b\u1EA1n, m\u1EB7t v\u1EABn c\xF2n t\xE1i."
+  choices:
+  - choiceText: "\"M\xE0y mu\u1ED1n \u0111i kh\u1ECFi \u0111\xE2y lu\xF4n kh\xF4ng?
+      Tao \u0111i v\u1EDBi m\xE0y\""
+    tensionImpact: 0
+    stateEffects: []
+    nextNode: {fileID: 11400000, guid: f7ab02eb95beab743b198d5c1150738d, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "\"\u0110\u1EE9ng \u0111\xE2y v\u1EDBi tao, \u0111\u1EC3 tao n\xF3i
+      chuy\u1EC7n v\u1EDBi H\xF9ng ch\xFAt\""
+    tensionImpact: -5
+    stateEffects: []
+    nextNode: {fileID: 11400000, guid: 85f1e58627730874e8241c96f94e8e80, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 0}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

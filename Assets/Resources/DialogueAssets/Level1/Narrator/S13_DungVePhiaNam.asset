@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S13_DungVePhiaNam
+  m_EditorClassIdentifier: 
+  nodeId: S13
+  npcText: "B\u1EA1n h\u1ECFi Nam ngay tr\u01B0\u1EDBc m\u1EB7t H\xF9ng:\n\n\"M\xE0y
+    mu\u1ED1n tao \u1EDF l\u1EA1i kh\xF4ng?\"\n\nNam nh\u1ECF gi\u1ECDng: \"\u0110\u1EEBng
+    \u0111i\u2026\""
+  choices:
+  - choiceText: "N\xF3i r\xF5: \"\u0110\u01B0\u1EE3c, tao \u1EDF \u0111\xE2y cho
+      t\u1EDBi khi m\xE0y th\u1EA5y an to\xE0n \u0111\xE3\""
+    tensionImpact: -5
+    stateEffects:
+    - effectType: 2
+      variableName: victimTrust
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.4
+    nextNode: {fileID: 11400000, guid: 85f1e58627730874e8241c96f94e8e80, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "Nh\xE1y m\u1EAFt v\u1EDBi Nam, ra hi\u1EC7u l\xE1t g\u1EB7p \u1EDF
+      c\u1EA7u thang sau \u0111\u1EC3 n\xF3i ri\xEAng"
+    tensionImpact: 0
+    stateEffects: []
+    nextNode: {fileID: 11400000, guid: 26d222bf4ebd37c4d9916ccafd41a5e6, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 0}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

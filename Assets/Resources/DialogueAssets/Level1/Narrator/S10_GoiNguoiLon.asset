@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S10_GoiNguoiLon
+  m_EditorClassIdentifier: 
+  nodeId: S10
+  npcText: "B\u1EA1n g\u1ECDi c\xF4 gi\xE1m th\u1ECB, n\xF3i v\u1EAFn t\u1EAFt:\n\n\"H\xE0nh
+    lang A \u0111ang c\xF3 v\u1EE5 c\u0103ng, c\xF4 ra gi\xFAp v\u1EDBi.\"\n\nGi\xE1o
+    vi\xEAn \u0111ang tr\xEAn \u0111\u01B0\u1EDDng t\u1EDBi..."
+  choices:
+  - choiceText: "\u1EDE l\u1EA1i, ti\u1EBFp t\u1EE5c n\xF3i chuy\u1EC7n \u0111\u1EC3
+      k\xE9o th\u1EDDi gian"
+    tensionImpact: -5
+    stateEffects: []
+    nextNode: {fileID: 11400000, guid: 6a2812798cae78d44aa81fdf0dffff22, type: 2}
+    useConditionalBranching: 1
+    conditionalBranches:
+    - conditionVariable: tension
+      comparison: 1
+      compareWithVariable: 0
+      rightHandVariable: 
+      comparisonValue: 70
+      targetNode: {fileID: 11400000, guid: 6a2812798cae78d44aa81fdf0dffff22, type: 2}
+    - conditionVariable: tension
+      comparison: 0
+      compareWithVariable: 0
+      rightHandVariable: 
+      comparisonValue: 69
+      targetNode: {fileID: 11400000, guid: 3104c094e2e312549bbd21f49006e236, type: 2}
+    animationTrigger: 
+  - choiceText: "\u0110\u1EE9ng xa quan s\xE1t"
+    tensionImpact: 0
+    stateEffects: []
+    nextNode: {fileID: 11400000, guid: ae70edc035f13ea4892ac68e923600a5, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 11400000, guid: 34fb7ce1082c57c41b6c18983a2febd4, type: 2}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

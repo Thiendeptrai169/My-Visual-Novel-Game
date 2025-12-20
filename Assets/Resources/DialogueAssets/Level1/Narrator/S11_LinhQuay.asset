@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S11_LinhQuay
+  m_EditorClassIdentifier: 
+  nodeId: S11
+  npcText: "Linh c\u1EA7m m\xE1y quay, b\u1EA1n khoanh tay \u0111\u1EE9ng xem, c\u1EA3nh
+    t\u01B0\u1EE3ng b\u1EAFt \u0111\u1EA7u thu h\xFAt v\xE0i \xE1nh nh\xECn xa xa."
+  choices:
+  - choiceText: "Th\xEC th\u1EA7m v\u1EDBi Linh: \"\u0110\u1EEBng \u0111\u0103ng
+      l\xEAn m\u1EA1ng, ch\u1EC9 \u0111\u1EC3 l\xE0m b\u1EB1ng ch\u1EE9ng th\xF4i\""
+    tensionImpact: -5
+    stateEffects:
+    - effectType: 2
+      variableName: rumorLevel
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.1
+    nextNode: {fileID: 11400000, guid: a5f675cdc12a3be46a9a2706da5db51c, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "H\xE0o h\u1EE9ng: \"\u0110\u1EC3 l\xE1t g\u1EEDi cho nh\xF3m chat
+      coi, t\u1EE5i n\xF3 s\u1ED1c lu\xF4n\""
+    tensionImpact: 0
+    stateEffects:
+    - effectType: 0
+      variableName: socialMediaPosted
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    nextNode: {fileID: 0}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 0}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

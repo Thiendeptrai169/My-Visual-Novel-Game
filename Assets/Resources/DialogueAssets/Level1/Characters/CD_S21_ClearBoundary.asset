@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006551cc1fc219b4c93954dbbd3a6403, type: 3}
+  m_Name: CD_S21_ClearBoundary
+  m_EditorClassIdentifier: 
+  sceneId: S21_ClearBoundary
+  dialogueLines:
+  - speakerName: "B\u1EA1n"
+    characterSprite: 1
+    position: 1
+    dialogueText: "Mu\u1ED1n n\xF3i g\xEC th\xEC n\xF3i, nh\u01B0ng tay b\u1ECF kh\u1ECFi
+      ng\u01B0\u1EDDi ta tr\u01B0\u1EDBc \u0111\xE3."
+    characterImage: {fileID: 3883308207946243467, guid: 60bd43c614c08d74f923547993576b09, type: 3}
+    expression: 0
+  - speakerName: "H\xF9ng"
+    characterSprite: 2
+    position: 2
+    dialogueText: "M\xE0y t\u01B0\u1EDFng m\xE0y l\xE0 ai?"
+    characterImage: {fileID: -8549905862460974130, guid: f08f45c1878704b408377b1b5ba8de5f, type: 3}
+    expression: 3
+  - speakerName: "B\u1EA1n"
+    characterSprite: 1
+    position: 1
+    dialogueText: "Tao l\xE0 ng\u01B0\u1EDDi \u0111\u1EE9ng \u0111\xE2y \u0111\u1EC3
+      chuy\u1EC7n n\xE0y kh\xF4ng bi\u1EBFn th\xE0nh \u0111\xE1nh nhau."
+    characterImage: {fileID: 3883308207946243467, guid: 60bd43c614c08d74f923547993576b09, type: 3}
+    expression: 0
+  - speakerName: Nam
+    characterSprite: 3
+    position: 0
+    dialogueText: "H\xF9ng\u2026"
+    characterImage: {fileID: -5570413676135392394, guid: 6556a8732e22aa940a25aadb414bf58a, type: 3}
+    expression: 4
+  - speakerName: "H\xF9ng"
+    characterSprite: 2
+    position: 2
+    dialogueText: "\u2026 r\u1ED3i. Tao b\u1ECF."
+    characterImage: {fileID: -5318339522232261332, guid: 9298f57194e2c2b439bacf47f7b9e982, type: 3}
+    expression: 0
+  nextChoiceNode: {fileID: 11400000, guid: ce77a7af384b29941a709baedbac67cf, type: 2}
+  autoAdvance: 1

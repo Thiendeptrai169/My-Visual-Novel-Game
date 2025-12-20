@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S9_PhoiHopVoiLinh
+  m_EditorClassIdentifier: 
+  nodeId: S9
+  npcText: "Hai b\u1EA1n chia vi\u1EC7c, Linh chu\u1EA9n b\u1ECB k\xE9o Nam, b\u1EA1n
+    \u0111\u1ED1i tho\u1EA1i v\u1EDBi H\xF9ng."
+  choices:
+  - choiceText: "Ra hi\u1EC7u cho Linh k\xE9o Nam khi b\u1EA1n b\u1EAFt \u0111\u1EA7u
+      n\xF3i"
+    tensionImpact: -5
+    stateEffects:
+    - effectType: 0
+      variableName: victimSafe
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    - effectType: 2
+      variableName: victimTrust
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.3
+    nextNode: {fileID: 11400000, guid: 11f259aa870d93240a47b40c603db000, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "\u0110\u1ED5i \xFD, b\u1EA3o Linh \u0111\u1EE9ng y\xEAn \u0111\u1EC3
+      tr\xE1nh r\u1ED1i th\xEAm, t\u1EF1 b\u1EA1n n\xF3i ri\xEAng v\u1EDBi H\xF9ng"
+    tensionImpact: -5
+    stateEffects: []
+    nextNode: {fileID: 11400000, guid: a5f675cdc12a3be46a9a2706da5db51c, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 0}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

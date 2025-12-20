@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S4_LinhXuatHien
+  m_EditorClassIdentifier: 
+  nodeId: S4
+  npcText: "Linh ch\u1EA1y t\u1EDBi, th\u1EDF h\u1ED5n h\u1EC3n: \"C\xF3 chuy\u1EC7n
+    g\xEC?\". C\u1EA3 hai c\xF9ng nh\xECn v\u1EC1 ph\xEDa H\xF9ng v\xE0 Nam."
+  choices:
+  - choiceText: "B\xE0n nhanh v\u1EDBi Linh: \"T\xED n\u1EEFa m\xE0y k\xE9o Nam,
+      tao n\xF3i chuy\u1EC7n v\u1EDBi H\xF9ng\""
+    tensionImpact: 0
+    stateEffects:
+    - effectType: 1
+      variableName: bystanderSupport
+      boolValue: 0
+      intValue: 2
+      floatValue: 0
+    nextNode: {fileID: 11400000, guid: b80836fd5b3c56d4d9f2b09c98b21683, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "B\u1EA3o Linh \u0111i g\u1ECDi c\xF4, b\u1EA1n \u1EDF l\u1EA1i quan
+      s\xE1t"
+    tensionImpact: 0
+    stateEffects:
+    - effectType: 0
+      variableName: calledHelp
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    - effectType: 0
+      variableName: teacherOnTheWay
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    - effectType: 2
+      variableName: teacherTrust
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.1
+    nextNode: {fileID: 11400000, guid: 117f62c540646db4eaf335f3cac8e1a6, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "B\u1EA3o Linh \u0111\u1EE9ng quay video, b\u1EA1n \u0111\u1EE9ng
+      ngo\xE0i coi"
+    tensionImpact: 5
+    stateEffects:
+    - effectType: 0
+      variableName: hasRecording
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    - effectType: 2
+      variableName: rumorLevel
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.2
+    - effectType: 2
+      variableName: playerReputation
+      boolValue: 0
+      intValue: 0
+      floatValue: -0.1
+    nextNode: {fileID: 11400000, guid: 33d8a77cc5d1d144c93ca6b5afdc3b58, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 11400000, guid: a440854dfbea56349bbe54c14f91cfd2, type: 2}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

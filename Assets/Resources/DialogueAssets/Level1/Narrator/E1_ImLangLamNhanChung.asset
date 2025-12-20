@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: E1_ImLangLamNhanChung
+  m_EditorClassIdentifier: 
+  nodeId: E1
+  npcText: "B\u1EA1n quay l\u1EA1i to\xE0n b\u1ED9 nh\u01B0ng kh\xF4ng can thi\u1EC7p.\nClip
+    c\xF3 th\u1EC3 gi\xFAp v\u1EC1 sau, nh\u01B0ng h\xF4m \u0111\xF3 Nam v\u1EABn
+    ph\u1EA3i t\u1EF1 ch\u1ECBu tr\u1EADn."
+  choices: []
+  characterDialogue: {fileID: 11400000, guid: f5d1f761af2164b4294619ac32e65b47, type: 2}
+  isEndingNode: 1
+  endingTitle: "Im l\u1EB7ng l\xE0m nh\xE2n ch\u1EE9ng"
+  isGoodEnding: 0

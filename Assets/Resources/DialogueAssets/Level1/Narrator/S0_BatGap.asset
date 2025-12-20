@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S0_BatGap
+  m_EditorClassIdentifier: 
+  nodeId: S0
+  npcText: "B\u1EA1n v\u1EEBa h\u1EBFt ti\u1EBFt, \u0111i tr\xEAn h\xE0nh lang v\u1EAFng,
+    th\u1EA5y H\xF9ng d\xED Nam v\xE0o t\u01B0\u1EDDng, n\xF3i l\u1EDBn:\n\n\"M\xE0y
+    t\u01B0\u1EDFng tao kh\xF4ng bi\u1EBFt m\xE0y m\xE9c chuy\u1EC7n h\xF4m b\u1EEFa
+    h\u1EA3?\""
+  choices:
+  - choiceText: "Gi\u1EA3 v\u1EDD \u0111i ngang, l\u1EAFng nghe cho r\xF5 \u0111\xE3"
+    tensionImpact: 0
+    stateEffects: []
+    nextNode: {fileID: 11400000, guid: c0ed612ba7cdff3418439121137031ab, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "H\u01A1i ch\u1EA1y l\u1EA1i nhanh, g\u1ECDi \"\xCA H\xF9ng, g\xEC
+      v\u1EADy?\""
+    tensionImpact: 5
+    stateEffects:
+    - effectType: 2
+      variableName: playerReputation
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.1
+    nextNode: {fileID: 11400000, guid: a494bcdc9bdc8044c9af56bdd8960224, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "R\xFAt \u0111i\u1EC7n tho\u1EA1i ra, m\u1EDF camera nh\u01B0ng \u0111\u1EC3
+      th\u1EA5p"
+    tensionImpact: 0
+    stateEffects:
+    - effectType: 0
+      variableName: hasRecording
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    nextNode: {fileID: 11400000, guid: f94621db3e2a44e4eb04278c9ae37782, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "Quay \u0111\u1EA7u \u0111i ch\u1ED7 kh\xE1c, gi\u1EA3 v\u1EDD kh\xF4ng
+      th\u1EA5y"
+    tensionImpact: -5
+    stateEffects:
+    - effectType: 0
+      variableName: playerWalkedAway
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    - effectType: 2
+      variableName: playerReputation
+      boolValue: 0
+      intValue: 0
+      floatValue: -0.2
+    - effectType: 2
+      variableName: victimTrust
+      boolValue: 0
+      intValue: 0
+      floatValue: -0.3
+    nextNode: {fileID: 11400000, guid: 0b3dfe4f0be787349a94470033d29f65, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 11400000, guid: f772baae0c6102b4daf8c10435c8ca7e, type: 2}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

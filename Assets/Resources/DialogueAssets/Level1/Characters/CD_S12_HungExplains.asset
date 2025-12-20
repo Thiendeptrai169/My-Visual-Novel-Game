@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006551cc1fc219b4c93954dbbd3a6403, type: 3}
+  m_Name: CD_S12_HungExplains
+  m_EditorClassIdentifier: 
+  sceneId: S12_HungExplains
+  dialogueLines:
+  - speakerName: "B\u1EA1n"
+    characterSprite: 1
+    position: 1
+    dialogueText: "R\u1ED3i, n\xF3i tao nghe. M\xE0y b\u1EF1c c\xE1i g\xEC?"
+    characterImage: {fileID: 3883308207946243467, guid: 60bd43c614c08d74f923547993576b09, type: 3}
+    expression: 0
+  - speakerName: "H\xF9ng"
+    characterSprite: 2
+    position: 2
+    dialogueText: "Tao b\u1ECB g\u1ECDi l\xEAn ph\xF2ng gi\xE1m th\u1ECB. Ng\u01B0\u1EDDi
+      ta nh\xECn tao nh\u01B0 th\u1EB1ng t\u1ED9i \u0111\u1ED3."
+    characterImage: {fileID: -8549905862460974130, guid: f08f45c1878704b408377b1b5ba8de5f, type: 3}
+    expression: 3
+  - speakerName: Nam
+    characterSprite: 3
+    position: 0
+    dialogueText: "Tao kh\xF4ng n\xF3i\u2026 tao ch\u1EC9 l\u1EE1 h\u1ECFi\u2026"
+    characterImage: {fileID: -5570413676135392394, guid: 6556a8732e22aa940a25aadb414bf58a, type: 3}
+    expression: 4
+  - speakerName: "B\u1EA1n"
+    characterSprite: 1
+    position: 1
+    dialogueText: "Nam, m\xE0y n\xF3i r\xF5 cho H\xF9ng nghe. C\xF2n H\xF9ng, m\xE0y
+      nghe h\u1EBFt r\u1ED3i h\u1EB5ng n\xF3ng."
+    characterImage: {fileID: 3883308207946243467, guid: 60bd43c614c08d74f923547993576b09, type: 3}
+    expression: 0
+  - speakerName: "H\xF9ng"
+    characterSprite: 2
+    position: 2
+    dialogueText: "Nghe c\xE1i g\xEC n\u1EEFa? Tao m\u1EA5t m\u1EB7t r\u1ED3i!"
+    characterImage: {fileID: -8549905862460974130, guid: f08f45c1878704b408377b1b5ba8de5f, type: 3}
+    expression: 3
+  - speakerName: "B\u1EA1n"
+    characterSprite: 1
+    position: 1
+    dialogueText: "M\u1EA5t m\u1EB7t th\xEC gi\u1EA3i quy\u1EBFt cho ra l\u1EBD.
+      \u0110\u1EE5ng tay l\xE0 t\u1EF1 thua."
+    characterImage: {fileID: -1134177093212193384, guid: 2ce989f7b052fcb46a0edd36c3c9f000, type: 3}
+    expression: 4
+  nextChoiceNode: {fileID: 11400000, guid: a5f675cdc12a3be46a9a2706da5db51c, type: 2}
+  autoAdvance: 1

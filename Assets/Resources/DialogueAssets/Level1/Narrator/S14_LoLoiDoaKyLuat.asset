@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S14_LoLoiDoaKyLuat
+  m_EditorClassIdentifier: 
+  nodeId: S14
+  npcText: "B\u1EA1n nh\u1EAFc t\u1EDBi chuy\u1EC7n s\u1ED5 \u0111\u1EA7u b\xE0i,
+    k\u1EF7 lu\u1EADt. H\xF9ng nh\xEDu m\xE0y, gi\u1ECDng g\u1EAFt h\u01A1n."
+  choices:
+  - choiceText: "Nh\u1EADn ra m\xECnh h\u01A1i l\u1ED1, nhanh ch\xF3ng \u0111\u1ED5i
+      l\u1EA1i: \"\xDD tao l\xE0\u2026 \u0111\u1EEBng \u0111\u1EC3 t\u1EE5i m\xECnh
+      d\xEDnh r\u1EAFc r\u1ED1i th\xEAm\""
+    tensionImpact: -5
+    stateEffects:
+    - effectType: 2
+      variableName: playerReputation
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.1
+    nextNode: {fileID: 11400000, guid: 85f1e58627730874e8241c96f94e8e80, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "V\u1EABn gi\u1EEF th\xE1i \u0111\u1ED9 \"tao n\xF3i \u0111\xFAng
+      lu\u1EADt m\xE0\", kh\xF4ng \u0111\u1ED5i gi\u1ECDng"
+    tensionImpact: 10
+    stateEffects:
+    - effectType: 0
+      variableName: futureThreat
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    nextNode: {fileID: 11400000, guid: 85f1e58627730874e8241c96f94e8e80, type: 2}
+    useConditionalBranching: 1
+    conditionalBranches:
+    - conditionVariable: tension
+      comparison: 0
+      compareWithVariable: 0
+      rightHandVariable: 
+      comparisonValue: 75
+      targetNode: {fileID: 11400000, guid: 3104c094e2e312549bbd21f49006e236, type: 2}
+    animationTrigger: 
+  characterDialogue: {fileID: 0}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

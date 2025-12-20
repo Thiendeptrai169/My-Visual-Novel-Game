@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006551cc1fc219b4c93954dbbd3a6403, type: 3}
+  m_Name: CD_S10_TeacherCalled
+  m_EditorClassIdentifier: 
+  sceneId: S10_TeacherCalled
+  dialogueLines:
+  - speakerName: "B\u1EA1n"
+    characterSprite: 1
+    position: 1
+    dialogueText: "Alo c\xF4, c\xF4 qua h\xE0nh lang A gi\xFAp t\u1EE5i em v\u1EDBi
+      \u1EA1."
+    characterImage: {fileID: -1134177093212193384, guid: 2ce989f7b052fcb46a0edd36c3c9f000, type: 3}
+    expression: 4
+  - speakerName: "C\xF4 gi\xE1m th\u1ECB"
+    characterSprite: 5
+    position: 2
+    dialogueText: "C\xF3 chuy\u1EC7n g\xEC?"
+    characterImage: {fileID: 0}
+    expression: 0
+  - speakerName: "B\u1EA1n"
+    characterSprite: 1
+    position: 1
+    dialogueText: "C\xF3 b\u1EA1n \u0111ang g\xE2y c\u0103ng th\u1EB3ng, em s\u1EE3
+      s\u1EBD x\u1EA3y ra x\xF4 x\xE1t."
+    characterImage: {fileID: -1134177093212193384, guid: 2ce989f7b052fcb46a0edd36c3c9f000, type: 3}
+    expression: 4
+  - speakerName: "C\xF4 gi\xE1m th\u1ECB"
+    characterSprite: 5
+    position: 2
+    dialogueText: "\u0110\u01B0\u1EE3c. C\xF4 t\u1EDBi ngay. C\xE1c em \u0111\u1EE9ng
+      xa ra, \u0111\u1EEBng k\xEDch \u0111\u1ED9ng th\xEAm."
+    characterImage: {fileID: 0}
+    expression: 0
+  - speakerName: "B\u1EA1n"
+    characterSprite: 1
+    position: 1
+    dialogueText: "D\u1EA1."
+    characterImage: {fileID: 3883308207946243467, guid: 60bd43c614c08d74f923547993576b09, type: 3}
+    expression: 0
+  nextChoiceNode: {fileID: 11400000, guid: 117f62c540646db4eaf335f3cac8e1a6, type: 2}
+  autoAdvance: 1

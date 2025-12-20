@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: E0_BoDi
+  m_EditorClassIdentifier: 
+  nodeId: E0
+  npcText: "B\u1EA1n \u0111\xE3 ch\u1ECDn kh\xF4ng xen v\xE0o.\nNam nh\u1EDB r\u1EA5t
+    r\xF5 vi\u1EC7c b\u1EA1n \u0111\xE3 nh\xECn th\u1EA5y m\xE0 v\u1EABn quay l\u01B0ng."
+  choices: []
+  characterDialogue: {fileID: 11400000, guid: 296f1d49caf7e1b41a708de15747acac, type: 2}
+  isEndingNode: 1
+  endingTitle: "B\u1ECF \u0111i"
+  isGoodEnding: 0

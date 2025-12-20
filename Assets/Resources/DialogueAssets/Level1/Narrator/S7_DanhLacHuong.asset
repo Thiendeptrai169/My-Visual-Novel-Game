@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S7_DanhLacHuong
+  m_EditorClassIdentifier: 
+  nodeId: S7
+  npcText: "B\u1EA1n b\u1ECBa chuy\u1EC7n gi\xE1o vi\xEAn t\xECm H\xF9ng. H\xF9ng
+    h\u01A1i kh\u1EF1ng l\u1EA1i, li\u1EBFc quanh."
+  choices:
+  - choiceText: "Th\xEAm: \"H\xECnh nh\u01B0 chuy\u1EC7n \u0111i\u1EBFu thu\u1ED1c
+      trong nh\xE0 v\u1EC7 sinh h\xF4m qua\""
+    tensionImpact: 10
+    stateEffects:
+    - effectType: 2
+      variableName: hungReputation
+      boolValue: 0
+      intValue: 0
+      floatValue: -0.3
+    nextNode: {fileID: 11400000, guid: adb0a71331e0fc94dbe930e74601f2aa, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "Nh\xE2n l\xFAc H\xF9ng ph\xE2n t\xE2m, ra hi\u1EC7u cho Nam l\xF9i
+      l\u1EA1i"
+    tensionImpact: -10
+    stateEffects:
+    - effectType: 0
+      variableName: victimSafe
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    - effectType: 2
+      variableName: victimTrust
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.2
+    nextNode: {fileID: 11400000, guid: 11f259aa870d93240a47b40c603db000, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "Khi H\xF9ng h\u1ECFi: \"Th\u1EADt kh\xF4ng?\", b\u1EA1n th\xFA nh\u1EADn
+      \"Kh\xF4ng\u2026 tao ch\u1EC9 mu\u1ED1n m\xE0y d\u1EEBng l\u1EA1i\""
+    tensionImpact: -5
+    stateEffects:
+    - effectType: 2
+      variableName: teacherTrust
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.1
+    nextNode: {fileID: 11400000, guid: a5f675cdc12a3be46a9a2706da5db51c, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 11400000, guid: a55595460e672394fb598d64dad8a990, type: 2}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

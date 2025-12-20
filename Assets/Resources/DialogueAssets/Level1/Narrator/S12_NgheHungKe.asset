@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S12_NgheHungKe
+  m_EditorClassIdentifier: 
+  nodeId: S12
+  npcText: "B\u1EA1n cho H\xF9ng c\u01A1 h\u1ED9i n\xF3i:\n\n\"R\u1ED3i, k\u1EC3
+    tao nghe chuy\u1EC7n g\xEC tr\u01B0\u1EDBc \u0111\xE3.\"\n\nH\xF9ng b\u1EAFt
+    \u0111\u1EA7u x\u1EA3: Nam b\u1ECB nghi l\xE0 \u0111\xE3 k\u1EC3 chuy\u1EC7n
+    H\xF9ng h\xFAt thu\u1ED1c."
+  choices:
+  - choiceText: "Th\u1EEBa nh\u1EADn: \"N\u1EBFu l\xE0 tao, tao c\u0169ng t\u1EE9c,
+      nh\u01B0ng \u0111\xE1nh ng\u01B0\u1EDDi th\xEC\u2026\""
+    tensionImpact: -15
+    stateEffects:
+    - effectType: 2
+      variableName: hungReputation
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.2
+    nextNode: {fileID: 11400000, guid: 0a17ce63d2376374787d3d076fae58b1, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "\u0110\u1ED5i c\xE2u chuy\u1EC7n sang h\u01B0\u1EDBng \"t\u1EE5i
+      m\xECnh c\xF9ng \u0111ang c\u0103ng v\xEC thi c\u1EED, \u0111\u1EEBng tr\xFAt
+      l\xEAn nhau\""
+    tensionImpact: -5
+    stateEffects:
+    - effectType: 2
+      variableName: playerReputation
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.1
+    nextNode: {fileID: 11400000, guid: 85f1e58627730874e8241c96f94e8e80, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "Bu\u1ED9t mi\u1EC7ng: \"Th\xEC m\xE0y h\xFAt th\xEC ch\u1ECBu, m\u1EAFc
+      g\xEC \u0111\u1ED5 cho ng\u01B0\u1EDDi kh\xE1c?\""
+    tensionImpact: 10
+    stateEffects:
+    - effectType: 2
+      variableName: hungReputation
+      boolValue: 0
+      intValue: 0
+      floatValue: -0.2
+    - effectType: 0
+      variableName: aggressorFocusOnPlayer
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    nextNode: {fileID: 11400000, guid: adb0a71331e0fc94dbe930e74601f2aa, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 11400000, guid: 9c3b43eb493b595488fe779bac169fc8, type: 2}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

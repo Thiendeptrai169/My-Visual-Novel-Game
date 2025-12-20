@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S21_DatDieuKienRoRang
+  m_EditorClassIdentifier: 
+  nodeId: S21
+  npcText: "B\u1EA1n n\xF3i:\n\n\"Mu\u1ED1n n\xF3i g\xEC th\xEC n\xF3i, nh\u01B0ng
+    tay b\u1ECF kh\u1ECFi ng\u01B0\u1EDDi ta tr\u01B0\u1EDBc \u0111\xE3.\"\n\nH\xF9ng
+    g\u1EB1n gi\u1ECDng, nh\u01B0ng t\u1EEB t\u1EEB bu\xF4ng tay."
+  choices:
+  - choiceText: "Sau khi H\xF9ng bu\xF4ng, b\u1EA1n nh\u1EAFc Nam: \"Kh\xF4ng \u1ED5n
+      th\xEC n\xF3i hi\u1EC7u cho tao li\u1EC1n, tao g\u1ECDi c\xF4 ngay\""
+    tensionImpact: -5
+    stateEffects: []
+    nextNode: {fileID: 11400000, guid: 26d222bf4ebd37c4d9916ccafd41a5e6, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "Sau khi H\xF9ng bu\xF4ng, b\u1EA1n r\xFAt nh\u1EB9 Nam ra sau, coi
+      nh\u01B0 k\u1EBFt th\xFAc"
+    tensionImpact: -5
+    stateEffects: []
+    nextNode: {fileID: 11400000, guid: f7ab02eb95beab743b198d5c1150738d, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 11400000, guid: ef8801c43b0e1e240a2cd5810f4d658f, type: 2}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

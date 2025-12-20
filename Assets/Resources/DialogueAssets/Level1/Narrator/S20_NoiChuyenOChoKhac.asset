@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S20_NoiChuyenOChoKhac
+  m_EditorClassIdentifier: 
+  nodeId: S20
+  npcText: "C\u1EA3 nh\xF3m di chuy\u1EC3n sang ch\u1ED7 \xEDt ng\u01B0\u1EDDi, kh\xF4ng
+    c\xF2n c\u1EA3nh \"d\xED v\xE0o t\u01B0\u1EDDng\". C\u0103ng th\u1EB3ng gi\u1EA3m,
+    nh\u01B0ng c\u1EA3m x\xFAc v\u1EABn c\xF2n."
+  choices:
+  - choiceText: "Khuy\u1EBFn kh\xEDch H\xF9ng n\xF3i h\u1EBFt v\xE0 Nam nghe, b\u1EA1n
+      \u0111\xF3ng vai ng\u01B0\u1EDDi \"gi\u1EEF lu\u1EADt ch\u01A1i\""
+    tensionImpact: -10
+    stateEffects: []
+    nextNode: {fileID: 11400000, guid: eb1d5b8c1554df944adfba9e49727f8c, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "\u0110\u1EC1 ngh\u1ECB d\u1EEBng t\u1EA1i \u0111\xE2y, ai v\u1EC1
+      l\u1EDBp n\u1EA5y, b\u1EA1n h\u1EB9n Nam sau"
+    tensionImpact: -5
+    stateEffects: []
+    nextNode: {fileID: 11400000, guid: 26d222bf4ebd37c4d9916ccafd41a5e6, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 11400000, guid: e14f2d861f27a024ea65888c51bee088, type: 2}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

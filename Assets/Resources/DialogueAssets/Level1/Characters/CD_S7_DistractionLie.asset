@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006551cc1fc219b4c93954dbbd3a6403, type: 3}
+  m_Name: CD_S7_DistractionLie
+  m_EditorClassIdentifier: 
+  sceneId: S7_DistractionLie
+  dialogueLines:
+  - speakerName: "B\u1EA1n"
+    characterSprite: 1
+    position: 1
+    dialogueText: "H\xF9ng, tao v\u1EEBa nghe n\xF3i c\xF4 \u0111ang \u0111i ngang
+      khu n\xE0y \u0111\xF3."
+    characterImage: {fileID: 3883308207946243467, guid: 60bd43c614c08d74f923547993576b09, type: 3}
+    expression: 0
+  - speakerName: "H\xF9ng"
+    characterSprite: 2
+    position: 2
+    dialogueText: "Thi\u1EC7t kh\xF4ng?"
+    characterImage: {fileID: -8549905862460974130, guid: f08f45c1878704b408377b1b5ba8de5f, type: 3}
+    expression: 3
+  - speakerName: "B\u1EA1n"
+    characterSprite: 1
+    position: 1
+    dialogueText: "Thi\u1EC7t hay kh\xF4ng kh\xF4ng quan tr\u1ECDng. Quan tr\u1ECDng
+      l\xE0 m\xE0y l\xE0m v\u1EADy l\xE0 t\u1EF1 \u0111\u1EA9y m\xECnh v\xF4 r\u1EAFc
+      r\u1ED1i."
+    characterImage: {fileID: 3883308207946243467, guid: 60bd43c614c08d74f923547993576b09, type: 3}
+    expression: 0
+  - speakerName: Linh
+    characterSprite: 4
+    position: 0
+    dialogueText: "\u1EEA\u2026 th\xF4i m\xE0y d\u1EEBng l\u1EA1i \u0111i."
+    characterImage: {fileID: 9081517739207821662, guid: d50c856aedb212148872de9807112a17, type: 3}
+    expression: 4
+  - speakerName: Nam
+    characterSprite: 3
+    position: 0
+    dialogueText: "H\xF9ng\u2026 tao xin\u2026"
+    characterImage: {fileID: -5570413676135392394, guid: 6556a8732e22aa940a25aadb414bf58a, type: 3}
+    expression: 4
+  nextChoiceNode: {fileID: 11400000, guid: 139cb3575bc377f4f806ff6d94c22d70, type: 2}
+  autoAdvance: 1

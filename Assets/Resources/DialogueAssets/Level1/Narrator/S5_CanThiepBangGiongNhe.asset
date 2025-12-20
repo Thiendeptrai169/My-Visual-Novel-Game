@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: S5_CanThiepBangGiongNhe
+  m_EditorClassIdentifier: 
+  nodeId: S5
+  npcText: "B\u1EA1n b\u01B0\u1EDBc t\u1EDBi g\u1EA7n, c\u1ED1 gi\u1EEF t\xF4ng gi\u1ECDng
+    b\xECnh th\u01B0\u1EDDng:\n\n\"\u1EE6a c\xF3 chuy\u1EC7n g\xEC m\xE0 g\u1EAFt
+    v\u1EADy, b\xECnh t\u0129nh t\xED \u0111i?\""
+  choices:
+  - choiceText: "H\u1ECFi H\xF9ng: \"C\xF3 g\xEC n\xF3i t\u1EEB t\u1EEB, m\xE0y b\u1EF1c
+      c\xE1i g\xEC?\""
+    tensionImpact: -10
+    stateEffects:
+    - effectType: 2
+      variableName: hungReputation
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.1
+    nextNode: {fileID: 11400000, guid: a5f675cdc12a3be46a9a2706da5db51c, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "Quay sang Nam: \"M\xE0y c\xF3 \u1ED5n kh\xF4ng? Mu\u1ED1n tao \u1EDF
+      l\u1EA1i kh\xF4ng?\""
+    tensionImpact: -5
+    stateEffects:
+    - effectType: 2
+      variableName: victimTrust
+      boolValue: 0
+      intValue: 0
+      floatValue: 0.3
+    nextNode: {fileID: 11400000, guid: d6bba42be8d2f8041990f11a77d56f44, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  - choiceText: "L\u1EE1 mi\u1EC7ng n\xF3i: \"\u0110\xE1nh nhau trong tr\u01B0\u1EDDng
+      l\xE0 l\xEAn s\u1ED5 \u0111\u1EA7u b\xE0i \u0111\xF3\""
+    tensionImpact: 10
+    stateEffects:
+    - effectType: 2
+      variableName: hungReputation
+      boolValue: 0
+      intValue: 0
+      floatValue: -0.2
+    - effectType: 0
+      variableName: aggressorFocusOnPlayer
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+    nextNode: {fileID: 11400000, guid: adb0a71331e0fc94dbe930e74601f2aa, type: 2}
+    useConditionalBranching: 0
+    conditionalBranches: []
+    animationTrigger: 
+  characterDialogue: {fileID: 11400000, guid: af5228c6c8f7b9847b33a81bd04f057b, type: 2}
+  isEndingNode: 0
+  endingTitle: 
+  isGoodEnding: 0

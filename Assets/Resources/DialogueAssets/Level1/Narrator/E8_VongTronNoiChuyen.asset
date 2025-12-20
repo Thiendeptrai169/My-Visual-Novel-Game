@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b2042c3455ea4c92c19864f364f22, type: 3}
+  m_Name: E8_VongTronNoiChuyen
+  m_EditorClassIdentifier: 
+  nodeId: E8
+  npcText: "C\u1EA3 ba chuy\u1EC3n sang ng\u1ED3i n\xF3i chuy\u1EC7n \u1EDF ch\u1ED7
+    y\xEAn t\u0129nh.\nKh\xF4ng \u0111\xE1nh nhau, nh\u01B0ng b\u1EA1n v\u1EABn ph\u1EA3i
+    \u0111i\u1EC1u ph\u1ED1i c\u1EA3m x\xFAc hai b\xEAn."
+  choices: []
+  characterDialogue: {fileID: 11400000, guid: b37105fb477a67f4d8c5dc05830f7892, type: 2}
+  isEndingNode: 1
+  endingTitle: "V\xF2ng tr\xF2n n\xF3i chuy\u1EC7n"
+  isGoodEnding: 1
