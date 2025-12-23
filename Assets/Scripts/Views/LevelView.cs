@@ -27,12 +27,17 @@ public class LevelView : MonoBehaviour
     public CanvasGroup resultCanvasGroup;
     public TextMeshProUGUI resultTitle;
     public TextMeshProUGUI resultMessage;
+    
+    // ✅ NEW: Button references
+    [Header("Ending Buttons")]
+    public Button returnToMenuButton;
+    public Button exitGameButton;
 
     [Header("Ending Animation")]
     public float titleFadeInDuration = 0.5f;
     public float descriptionFadeInDelay = 0.8f;
     public float descriptionFadeInDuration = 0.5f;
-    public float autoRestartDelay = 5f;
+    public float buttonsShowDelay = 1.5f; // ✅ NEW: Show buttons after description
 
     [Header("Background Images")]
     public Image curBackground;
@@ -289,33 +294,33 @@ public class LevelView : MonoBehaviour
     #region Result Screen - Ending Display
 
     /// <summary>
-    /// Show ending with animation (title → description → auto restart)
+    /// ✅ UPDATED: Show ending with buttons instead of auto-restart
     /// </summary>
     public void ShowEnding(DialougeSO endingNode, System.Action onRestartCallback)
     {
-        if (endingNode == null || !endingNode.isEndingNode)
+     if (endingNode == null || !endingNode.isEndingNode)
         {
             Debug.LogError("[LevelView] Invalid ending node!");
             return;
         }
 
-        if (endingCoroutine != null)
+    if (endingCoroutine != null)
             StopCoroutine(endingCoroutine);
 
         endingCoroutine = StartCoroutine(ShowEndingCoroutine(endingNode, onRestartCallback));
     }
 
-    private System.Collections.IEnumerator ShowEndingCoroutine(DialougeSO endingNode, System.Action onRestartCallback)
+private System.Collections.IEnumerator ShowEndingCoroutine(DialougeSO endingNode, System.Action onRestartCallback)
     {
         Debug.Log("[LevelView] Starting ending coroutine...");
-        
-        // Setup panel
+     
+  // Setup panel
         resultPanel.SetActive(true);
         resultCanvasGroup.alpha = 0;
 
         // Format title & description
         string endingType = endingNode.isGoodEnding ? "GOOD ENDING" : "BAD ENDING";
-        resultTitle.text = $"<b>{endingType}: {endingNode.endingTitle}</b>";
+      resultTitle.text = $"<b>{endingType}: {endingNode.endingTitle}</b>";
         resultTitle.fontSize = 48;
         resultTitle.color = endingNode.isGoodEnding 
             ? new Color(0.2f, 0.8f, 0.3f)  
@@ -325,23 +330,27 @@ public class LevelView : MonoBehaviour
         resultMessage.fontSize = 28;
         resultMessage.fontStyle = FontStyles.Normal;
 
-        // Hide text initially
+        // Hide text and buttons initially
         resultTitle.canvasRenderer.SetAlpha(0f);
         resultMessage.canvasRenderer.SetAlpha(0f);
+        
+      // ✅ Hide buttons initially
+ if (returnToMenuButton != null) returnToMenuButton.gameObject.SetActive(false);
+        if (exitGameButton != null) exitGameButton.gameObject.SetActive(false);
 
         // STEP 1: Fade in panel
         Debug.Log("[LevelView] Step 1: Fading in panel...");
-        float timer = 0f;
+   float timer = 0f;
         while (timer < titleFadeInDuration)
         {
-            resultCanvasGroup.alpha = Mathf.Lerp(0, 1, timer / titleFadeInDuration);
-            timer += Time.deltaTime;
+       resultCanvasGroup.alpha = Mathf.Lerp(0, 1, timer / titleFadeInDuration);
+  timer += Time.deltaTime;
             yield return null;
         }
         resultCanvasGroup.alpha = 1f;
 
         // STEP 2: Fade in title
-        Debug.Log("[LevelView] Step 2: Fading in title...");
+    Debug.Log("[LevelView] Step 2: Fading in title...");
         resultTitle.CrossFadeAlpha(1f, titleFadeInDuration, false);
         yield return new WaitForSeconds(titleFadeInDuration);
 
@@ -353,32 +362,37 @@ public class LevelView : MonoBehaviour
         resultMessage.CrossFadeAlpha(1f, descriptionFadeInDuration, false);
         yield return new WaitForSeconds(descriptionFadeInDuration);
 
-        // STEP 4: Wait for auto restart
-        Debug.Log($"[LevelView] Step 5: Waiting {autoRestartDelay}s before restart...");
-        yield return new WaitForSeconds(autoRestartDelay);
-
-        //STEP 5: Call restart callback
-        Debug.Log("[LevelView] ✅ Calling restart callback...");
+     // ✅ STEP 4: Show buttons instead of auto-restart
+        Debug.Log("[LevelView] Step 5: Showing buttons...");
+        yield return new WaitForSeconds(buttonsShowDelay);
         
-        if (onRestartCallback != null)
+        if (returnToMenuButton != null)
         {
-            onRestartCallback.Invoke();
+            returnToMenuButton.gameObject.SetActive(true);
+  AnimationManager.instance?.PopIn(returnToMenuButton.transform, 0.3f);
         }
-        else
+        
+        if (exitGameButton != null)
         {
-            Debug.LogError("[LevelView] Restart callback is NULL!");
+       exitGameButton.gameObject.SetActive(true);
+            AnimationManager.instance?.PopIn(exitGameButton.transform, 0.3f);
         }
+
+        Debug.Log("[LevelView] ✅ Ending screen complete - waiting for user input");
+        
+ // ✅ Buttons will handle callbacks via EndingButtonsHandler
+        // No more auto-restart!
     }
 
-    public void HideResult()
+  public void HideResult()
     {
-        resultPanel.SetActive(false);
+   resultPanel.SetActive(false);
         if (endingCoroutine != null)
         {
-            StopCoroutine(endingCoroutine);
-            endingCoroutine = null;
+   StopCoroutine(endingCoroutine);
+        endingCoroutine = null;
         }
-    }
+  }
 
     #endregion
 

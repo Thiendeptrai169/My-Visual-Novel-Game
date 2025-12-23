@@ -440,7 +440,7 @@ public class LevelController : MonoBehaviour
     }
 
     /// <summary>
-    /// ✅ Handle ending - Load ending node and show with auto-restart
+    /// ✅ Handle ending - Show ending screen with buttons (no auto-restart)
     /// </summary>
     private void HandleEnding(string endingId)
     {
@@ -460,8 +460,8 @@ public class LevelController : MonoBehaviour
 
         if (endingNode == null)
         {
-            Debug.LogError($"[LevelController] ❌ Ending node {endingId} not found! Forcing restart...");
-            RestartLevel();
+            Debug.LogError($"[LevelController] ❌ Ending node {endingId} not found! Forcing return to menu...");
+            ReturnToMainMenu();
             return;
         }
 
@@ -481,11 +481,9 @@ public class LevelController : MonoBehaviour
             GlobalStateManager.instance.currentEndingId = endingId;
         }
 
-        // Show ending with auto-restart callback
-        view.ShowEnding(endingNode, () =>
-        {
-            RestartLevel();
-        });
+        // ✅ Show ending screen WITHOUT auto-restart callback
+        // Buttons will handle return to menu via EndingButtonsHandler
+        view.ShowEnding(endingNode, null);
     }
 
     /// <summary>
@@ -520,9 +518,10 @@ public class LevelController : MonoBehaviour
     }
 
     /// <summary>
-    /// ✅ Restart level - Called after ending animation completes
+    /// ✅ RENAMED: RestartLevel → ReturnToMainMenu (for clarity)
+    /// Called by EndingButtonsHandler when user clicks "Return to Menu"
     /// </summary>
-    private void RestartLevel()
+    public void ReturnToMainMenu()
     {
         Debug.Log("[LevelController] 🔄 Returning to Main Menu...");
         
@@ -547,9 +546,9 @@ public class LevelController : MonoBehaviour
             Debug.Log("[LevelController] Changed to MenuGameplay state");
         }
 
-        // Load Main Menu (scene 0)
-        Debug.Log("[LevelController] Loading Main Menu (scene 0)...");
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        // Load Main Menu
+        Debug.Log("[LevelController] Loading MainMenu scene...");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 
     /// <summary>

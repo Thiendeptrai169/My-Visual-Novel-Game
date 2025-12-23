@@ -9,6 +9,7 @@ public class MainMenuController : MonoBehaviour
 {
     [Header("UI References")]
     [SerializeField] private Button playButton;
+    [SerializeField] private Button exitButton; // ✅ NEW: Exit button
 
     [Header("Audio")]
     [SerializeField] private AudioSource menuAudioSource;
@@ -44,7 +45,7 @@ public class MainMenuController : MonoBehaviour
             Debug.LogError("[MainMenu] ❌ Menu BGM or AudioSource not assigned!");
         }
 
-        // Setup button listener
+        // Setup Play button
         if (playButton != null)
         {
             playButton.onClick.AddListener(OnPlayButtonClicked);
@@ -55,8 +56,20 @@ public class MainMenuController : MonoBehaviour
             Debug.LogError("[MainMenu] ❌ Play button is not assigned!");
         }
 
-        // Add button animation
-        AddButtonAnimation();
+        // ✅ Setup Exit button
+        if (exitButton != null)
+        {
+            exitButton.onClick.AddListener(OnExitButtonClicked);
+            Debug.Log("[MainMenu] ✅ Exit button setup complete");
+        }
+        else
+        {
+            Debug.LogWarning("[MainMenu] ⚠️ Exit button is not assigned!");
+        }
+
+        // Add button animations
+        AddButtonAnimation(playButton);
+        AddButtonAnimation(exitButton);
     }
 
     private void OnPlayButtonClicked()
@@ -74,15 +87,36 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene(gameplaySceneName);
     }
 
-    private void AddButtonAnimation()
+    // ✅ NEW: Exit button handler
+    private void OnExitButtonClicked()
     {
-        if (playButton != null)
+        Debug.Log("[MainMenu] 👋 Exit button clicked!");
+
+        // Play button click sound
+        if (buttonClickSound != null && menuAudioSource != null)
+        {
+            menuAudioSource.PlayOneShot(buttonClickSound);
+        }
+
+        // Exit application
+#if UNITY_EDITOR
+        Debug.Log("[MainMenu] (Editor) Stopping play mode");
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Debug.Log("[MainMenu] Quitting application");
+        Application.Quit();
+#endif
+    }
+
+    private void AddButtonAnimation(Button button)
+    {
+        if (button != null)
         {
             // Add hover animator
-            var animator = playButton.gameObject.GetComponent<UIButtonHoverAnimator>();
+            var animator = button.gameObject.GetComponent<UIButtonHoverAnimator>();
             if (animator == null)
             {
-                animator = playButton.gameObject.AddComponent<UIButtonHoverAnimator>();
+                animator = button.gameObject.AddComponent<UIButtonHoverAnimator>();
                 animator.hoverScale = 1.1f;
                 animator.animDuration = 0.2f;
                 animator.hoverSound = buttonHoverSound;
@@ -95,6 +129,11 @@ public class MainMenuController : MonoBehaviour
         if (playButton != null)
         {
             playButton.onClick.RemoveAllListeners();
+        }
+
+        if (exitButton != null)
+        {
+            exitButton.onClick.RemoveAllListeners();
         }
     }
 }
